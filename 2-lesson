@@ -1,0 +1,29 @@
+Connect to the Database
+If you have followed the steps from the Install PostgreSQL page, you now have a PostgreSQL database on you computer.
+There are several ways to connect to the database, we will look at two ways in this tutorial:
+-> SQL Shell (psql)
+-> pgAdmin 4
+
+1. SQL Shell (psql)
+- find the SQL Shell (psql) tool
+- Insert the name of the server. [localhost]
+- Insert the name of the database. [postgresql]
+- Insert the name of the port. [5432]
+- Insert the name of the username. [postgresql]
+- Enter the password you chose when you installed the PostgreSQL database: -------
+-> The result might look like an error, but if it shows psql (15.2) or any other version, and in the end you see the postgres=# command (and maybe a warning in between), then you have successfully connected to the database!
+- Result: postgres=# 
+- we can start executing SQL statements. for example: SELECT version();
+
+2. pgAdmin 4
+- choose the pgAdmin 4
+- choose the password
+- choose the [Server] option 
+- insert the password
+- Click on the [Database] option on in the menu
+- Open Query Tool than: You should find a database named postgres, right-click it choose the "Query Tool":
+- In the Query Tool we can start executing SQL statements. for example: SELECT version();
+- click the Plya button and you can see the result in the "Data Output" area:
+
+
+I prefer to use the next one. 
