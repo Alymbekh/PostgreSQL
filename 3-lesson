@@ -1,0 +1,46 @@
+1. Create table:
+CREATE TABLE cars(
+brand VARCHAR(255),
+model VARCHAR(255),
+year INT);
+
+2. INSERT INTO
+INSERT INTO cars(brand, model, year)
+VALUES ('Chevrolet', 'Malibu', 2002);
+
+#Insert Multiple Rows
+INSERT INTO cars(brand, model, year)
+VALUES
+  ('Chevrolet', 'Malibu', 2002),
+  ('Volvo', 'p1800', 1968),
+  ('BMW', 'M1', 1978),
+  ('Toyota', 'Celica', 1975);
+SELECT * FROM cars;
+
+3. PostgreSQL Select Data
+Specify Columns: SELECT brand, year FROM cars;
+Return all Columns: SELECT * FROM cars;
+
+4. PostgreSQL ADD COLUMN
+ALTER TABLE cars
+ADD color VARCHAR(255);
+
+5. PostgreSQL UPDATE
+INSERT INTO cars(brand, model, year)
+VALUES
+  ('Chevrolet', 'Malibu', 2002),
+  ('Volvo', 'p1800', 1968),
+  ('BMW', 'M1', 1978),
+  ('Toyota', 'Celica', 1975);
+UPDATE cars
+SET color = 'white', year = 1970
+WHERE brand = 'Toyota';
+
+SELECT * FROM cars;
+
+6. ALTER COLUMN
+ALTER TABLE cars
+ALTER COLUMN year TYPE VARCHAR(4);
+
+ALTER TABLE cars
+ALTER COLUMN color TYPE VARCHAR(30);
